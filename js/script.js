@@ -111,3 +111,21 @@ function calcola(numA, numB, operazione){
 //console.log(mioSaluto);
 //console.log(salutoString); Error!
 
+// operatore REST
+
+console.log('----------------------------');
+miaFunzioneConRest('ugo', 30, 'Via dei platani', 3479876543)
+miaFunzioneConRest('pino', 20)
+
+// posso passare alla funzione degli argomeni opzionali che verranno messi in una array
+function miaFunzioneConRest(name, age, ...args){
+  console.log(name);
+  console.log(age);
+  
+  // gli argomenti opzionali vengono inseriti in questo array che di defaul è vuoto
+  console.log(args);
+  if(args.length > 0){
+    console.log(args[0]);
+  }
+}
+
